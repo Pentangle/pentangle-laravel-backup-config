@@ -1,16 +1,16 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "pentangle/pentangle_laravel_backup_config",
+    "description": "An in house package for configuring backups with s3",
     "keywords": [
-        ":vendor_name",
-        "package_slug"
+        "Pentangle",
+        "pentangle_laravel_backup_config"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/pentangle/pentangle_laravel_backup_config",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Séan Poynter-Smith",
+            "email": "spoyntersmith@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Pentangle\\PentangleLaravelBackupConfig\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Pentangle\\PentangleLaravelBackupConfig\\Tests\\": "tests"
         }
     },
     "scripts": {

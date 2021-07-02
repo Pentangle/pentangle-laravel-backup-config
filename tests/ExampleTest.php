@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Pentangle\PentangleLaravelBackupConfig\Tests;
 
 use PHPUnit\Framework\TestCase;
 
