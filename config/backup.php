@@ -174,7 +174,7 @@ return [
     'monitor_backups' => [
         [
             'name'          => str_replace(['http://', 'https://'], '', env('APP_URL')),
-            'disks'         => ['s3'],
+            'disks'         => ['pentangle-s3'],
             'health_checks' => [
                 \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumAgeInDays::class          => 1,
                 \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumStorageInMegabytes::class => 5000,
@@ -240,14 +240,4 @@ return [
         ],
     ],
 
-    'pentangle-s3' => [
-        'driver'   => 's3',
-        'key'      => env('PENTANGLE_AWS_ACCESS_KEY_ID'),
-        'secret'   => env('PENTANGLE_AWS_SECRET_ACCESS_KEY'),
-        'region'   => env('PENTANGLE_AWS_DEFAULT_REGION'),
-        'bucket'   => env('PENTANGLE_AWS_BUCKET'),
-        'url'      => env('PENTANGLE_AWS_URL'),
-        'endpoint' => env('PENTANGLE_AWS_ENDPOINT'),
-        'root'     => str_replace(['http://', 'https://'], '', env('APP_URL')),
-    ],
 ];

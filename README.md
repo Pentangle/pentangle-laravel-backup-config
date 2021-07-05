@@ -5,25 +5,6 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/pentangle/pentangle_laravel_backup_config/Check%20&%20fix%20styling?label=code%20style)](https://github.com/pentangle/pentangle_laravel_backup_config/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/pentangle/pentangle_laravel_backup_config.svg?style=flat-square)](https://packagist.org/packages/pentangle/pentangle_laravel_backup_config)
 
----
-This package can be used as to scaffold a Laravel package. Follow these steps to get started:
-
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this pentangle_laravel_backup_config
-2. Run "./configure.sh" to run a script that will replace all placeholders throughout all the files
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/pentangle-laravel-backup-config.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/pentangle-laravel-backup-config)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
 ## Installation
 
 You can install the package via composer:
@@ -34,9 +15,25 @@ composer require pentangle/pentangle_laravel_backup_config
 
 ## Usage
 
+Add the following disk configuration to filesystems.php
 ```php
-$pentangle_laravel_backup_config = new Pentangle\PentangleLaravelBackupConfig();
-echo $pentangle_laravel_backup_config->echoPhrase('Hello, Pentangle!');
+    'pentangle-s3' => [
+        'driver'   => 's3',
+        'key'      => env('PENTANGLE_AWS_ACCESS_KEY_ID'),
+        'secret'   => env('PENTANGLE_AWS_SECRET_ACCESS_KEY'),
+        'region'   => env('PENTANGLE_AWS_DEFAULT_REGION'),
+        'bucket'   => env('PENTANGLE_AWS_BUCKET'),
+        'url'      => env('PENTANGLE_AWS_URL'),
+        'endpoint' => env('PENTANGLE_AWS_ENDPOINT'),
+        'root'     => str_replace(['http://', 'https://'], '', env('APP_URL')),
+    ],
+```
+
+For testing locally with s3 ensure the correct path to mysqldump is set in config/databases.php
+```php
+    'dump'           => [
+        'dump_binary_path' => env('app_env') === 'local' ? '/usr/local/opt/mysql-client/bin' : null,
+    ],
 ```
 
 ## Testing
