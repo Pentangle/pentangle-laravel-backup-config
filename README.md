@@ -46,7 +46,7 @@ For testing locally with s3 ensure the correct path to mysqldump is set in confi
 
 ```php
     'dump'           => [
-        'dump_binary_path' => env('app_env') === 'local' ? '/usr/local/opt/mysql-client/bin' : '/usr/bin',
+        'dump_binary_path' => env('APP_ENV') === 'local' ? '/usr/local/opt/mysql-client/bin' : '/usr/bin',
     ],
 ```
 
