@@ -36,7 +36,7 @@ Add the following service provider to config/app.php (optional)
     \Pentangle\PentangleLaravelBackupConfig\PentangleLaravelBackupServiceProvider::class,
 ```
 
-Publish the config file
+Publish the config file (optional)
 
 ```php
     php artisan vendor:publish --provider="Pentangle\PentangleLaravelBackupConfig\PentangleLaravelBackupServiceProvider"
