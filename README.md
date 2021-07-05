@@ -36,6 +36,12 @@ Add the following service provider to config/app.php (optional)
     \Pentangle\PentangleLaravelBackupConfig\PentangleLaravelBackupServiceProvider::class,
 ```
 
+Publish the config file
+
+```php
+    php artisan vendor:publish --provider="Pentangle\PentangleLaravelBackupConfig\PentangleLaravelBackupServiceProvider"
+```
+
 For testing locally with s3 ensure the correct path to mysqldump is set in config/databases.php
 
 ```php
