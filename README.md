@@ -32,7 +32,7 @@ Add the following disk configuration to filesystems.php
 For testing locally with s3 ensure the correct path to mysqldump is set in config/databases.php
 ```php
     'dump'           => [
-        'dump_binary_path' => env('app_env') === 'local' ? '/usr/local/opt/mysql-client/bin' : null,
+        'dump_binary_path' => env('app_env') === 'local' ? '/usr/local/opt/mysql-client/bin' : '/usr/bin',
     ],
 ```
 
