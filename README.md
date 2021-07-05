@@ -10,12 +10,13 @@
 You can install the package via composer:
 
 ```bash
-composer require pentangle/pentangle_laravel_backup_config
+composer require pentangle/pentangle-laravel-backup-config
 ```
 
 ## Usage
 
 Add the following disk configuration to filesystems.php
+
 ```php
     'pentangle-s3' => [
         'driver'   => 's3',
@@ -30,6 +31,7 @@ Add the following disk configuration to filesystems.php
 ```
 
 For testing locally with s3 ensure the correct path to mysqldump is set in config/databases.php
+
 ```php
     'dump'           => [
         'dump_binary_path' => env('app_env') === 'local' ? '/usr/local/opt/mysql-client/bin' : '/usr/bin',
