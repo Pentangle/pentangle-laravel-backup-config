@@ -1,5 +1,5 @@
 {
-    "name": "pentangle/pentangle_laravel_backup_config",
+    "name": "pentangle/pentangle-laravel-backup-config",
     "description": "An in house package for configuring backups with s3",
     "keywords": [
         "Pentangle",
@@ -23,6 +23,7 @@
         "spatie/laravel-package-tools": "^1.9"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "friendsofphp/php-cs-fixer": "^2.17",
         "phpunit/phpunit": "^9.5",
         "spatie/ray": "^1.10",
