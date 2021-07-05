@@ -5,7 +5,7 @@ namespace Pentangle\PentangleLaravelBackupConfig;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class PentangleLaravelBackupConfigClass extends PackageServiceProvider
+class PentangleLaravelBackupServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

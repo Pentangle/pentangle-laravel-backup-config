@@ -30,6 +30,12 @@ Add the following disk configuration to filesystems.php
     ],
 ```
 
+Add the following service provider to config/app.php (optional)
+
+```php
+    \Pentangle\PentangleLaravelBackupConfig\PentangleLaravelBackupServiceProvider::class,
+```
+
 For testing locally with s3 ensure the correct path to mysqldump is set in config/databases.php
 
 ```php
