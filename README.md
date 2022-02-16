@@ -26,7 +26,7 @@ Add the following disk configuration to filesystems.php
         'bucket'   => env('PENTANGLE_AWS_BUCKET'),
         'url'      => env('PENTANGLE_AWS_URL'),
         'endpoint' => env('PENTANGLE_AWS_ENDPOINT'),
-        'root'     => str_replace(['http://', 'https://'], '', env('APP_URL')),
+        'root'     => str_replace(['http://', 'https://'], '', env('APP_URL', 'example.com')),
     ],
 ```
 
