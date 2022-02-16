@@ -25,7 +25,7 @@ return [
          * The name of this application. You can use this name to monitor
          * the backups.
          */
-        'name'           => str_replace(['http://', 'https://'], '', env('APP_URL')),
+        'name'           => str_replace(['http://', 'https://'], '', env('APP_URL', 'example.com')),
 
         'source'                   => [
 
